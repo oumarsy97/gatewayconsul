@@ -1,0 +1,30 @@
+{
+  "gateway2App": {
+    "service1Produit": {
+      "home": {
+        "title": "Produits",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Produit",
+        "createOrEditLabel": "Create or edit a Produit",
+        "notFound": "No Produits found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Produit {{ id }}?"
+      },
+      "detail": {
+        "title": "Produit"
+      },
+      "id": "ID",
+      "libelle": "Libelle",
+      "quantite": "Quantite",
+      "price": "Price"
+    }
+  },
+  "service1App": {
+    "service1Produit": {
+      "created": "A new Produit is created with identifier {{ param }}",
+      "updated": "A Produit is updated with identifier {{ param }}",
+      "deleted": "A Produit is deleted with identifier {{ param }}"
+    }
+  }
+}

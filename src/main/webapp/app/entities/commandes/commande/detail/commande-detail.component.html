@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (commande(); as commandeRef) {
+      <div>
+        <h2 data-cy="commandeDetailsHeading"><span jhiTranslate="gateway2App.commandesCommande.detail.title">Commande</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ commandeRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gateway2App.commandesCommande.referentiel">Referentiel</span></dt>
+          <dd>
+            <span>{{ commandeRef.referentiel }}</span>
+          </dd>
+          <dt><span jhiTranslate="gateway2App.commandesCommande.userId">User Id</span></dt>
+          <dd>
+            <span>{{ commandeRef.userId }}</span>
+          </dd>
+          <dt><span jhiTranslate="gateway2App.commandesCommande.dateCommande">Date Commande</span></dt>
+          <dd>
+            <span>{{ commandeRef.dateCommande | formatMediumDatetime }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+        </button>
+
+        <button type="button" [routerLink]="['/commande', commandeRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>
